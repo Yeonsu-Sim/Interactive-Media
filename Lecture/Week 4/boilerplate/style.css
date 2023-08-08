@@ -1,0 +1,13 @@
+
+
+* { /* Implemented to Every Element*/
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --co101: rgb(0,0,0);
+    --co102: rgb(80,80,80);
+    --co103: rgb(160,160,160);
+    --co104: rgb(240,240,240);
+}

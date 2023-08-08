@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <!-- this is the head, it loads the metadata -->
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <title>Responsive Units Examples</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+
+  </head>
+
+  <body>
+
+    <h1>Responsive Units Examples</h1>
+
+    <p>
+      As on the CSS Worksheet div elements have a display of block. This means by default they'll
+      take up the full width of whatever element they are inside of and the full height of whatever 
+      content they have inside of them. There are three divs below but only the first two are visible - 
+      the first one has something in it - text - so it has the height of the text. The second one has 
+      height declared in CSS - 1rem - so we can see it. The third div is there but because it has nothing 
+      in it its height is set to 0.
+    </p>
+
+    <div id="res-ex-one">I've got text in me so my height is set to the text</div>
+    <div id="res-ex-two"></div>
+    <div id="res-ex-three"></div>
+
+    <p>
+      When we set explicit height and width to our elements we want to use responsive units - like rem in 
+      the example above. The first div below uses absolute units - 600px - so if I resize my screen it'll stay 
+      the same width. The second has a responsive unit - 60% - so it takes up 60% of its parent's width. As 
+      its parent is the body that essentially means 60% of the page width. The third uses rem, a unit based 
+      on the default font size, so instead of responding to the size of the window it responds to the size of 
+      the devices text - this is usually set to 16px but can be changed by the users system.
+    </p>
+
+    <div id="res-ex-four"></div>
+    <div id="res-ex-five"></div>
+    <div id="res-ex-six"></div>
+
+    <p>
+      Remeber when using % that it works on nested elements referentially. Each of the three divs below have a 
+      width of 60% but each are incrementally smaller. If we instead want to refer to the size of the window 
+      inside of the nested element we can use something like vh or vw. 
+    </p>
+
+    <div id="res-ex-seven">
+      <div id="res-ex-eight">
+        <div id="res-ex-nine"></div>
+      </div>
+    </div>
+
+  </body>
+
+</html>

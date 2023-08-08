@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Basics</title>
+
+    <style>
+      /* 
+      .sections{
+        padding: 20px;
+        padding-top: 10px;
+        border: 10px double white;
+      } 
+      */
+    </style>
+
+</head>
+
+<body>
+
+  <h1>HTML Basics</h1>
+
+  <section style="background-color:beige;" id="setup" class="sections">
+
+    <h2>Getting Set Up</h2>
+
+    <p>
+      All you need to write HTML, CSS and JavaScript is a text editor - not a rich-text formatting program like Word, but TextEdit or Notepad will work.</p>
+
+    <p>This semester we will be using <a href="https://code.visualstudio.com/">VSCode</a>, which is free and cross-platform.</p>
+
+    <p>You should add an extension that will run your HTML pages locally in your browser of choice - Live Server in VSCode, which can be easily found on the extension marketplace.</p>
+
+    <img src="./images/liveServer.png" width="926px" alt="Live Server extension on VSCode's extension marketplace">
+
+    <p>
+      Browsers? Firefox all the way, but you're going to need to get used to using all of them for testing purposes.
+    </p>
+
+    <!-- Where possible avoid long lines of code - as a rule of thumb you don't want to have to scroll left and right to view your code when editing it -->
+
+    <p>
+      A good way to understand how others create websites is to view both the website and the code used to create it at the same time. We'll cover how 
+      to do this for online websites but while we introduce HTML, CSS & JavaScript there'll be worksheets like this where you're able to switch back and 
+      forth between the source code in VS Code and the page it generates in the web browser.
+    </p>
+
+    <p>
+      To get started on a coding session like we'll be doing in class first open the website's folder using VS Code - careful not to use the open file command by accident. 
+      Once it has loaded the folder and you can see the correct files in the explorer to the left you'll need to press the go live button in the bottom right corner of the window 
+      - this should open your web page in your default browser. While you can directly open a HTML file I strongly recommend using Live Server as it'll automatically update the 
+      browser page when you save your code. 
+    </p>
+
+
+  </section>
+
+  <section style="background-color:darkseagreen;" id="boilerplate" class="sections">
+
+    <h2>Boilerplate Code</h2>
+
+    <img src="./boilerplateHTML.png" width="926px" alt="boiler plate html code without any information in the body">
+
+    <p>The boilerplate code above, which we set up together last week, creates the basic structure for a web page.</p>
+
+    <!--
+      The &lt; and &gt; you can see throughout the HTML code are character entities which represent the less than < or greater than > signs - this is to stop the 
+      browser getting confused with their use as part of HTML tags, so instead we write them in this format.
+    -->
+
+    <p>The <strong>&lt;!DOCTYPE html&gt;</strong> tag tells browsers that the <strong>document</strong> (name for a HTML file) contains code written in HTML.</p>
+
+    <p>
+      The <strong>&lt;html&gt;</strong> tag specifies where our HTML starts and stops - notice the tag is 'closed' with a <strong>&lt;/html&gt;</strong> tag at the end of the document - the forward 
+      slash indicates a closing tag. Not all tags need to be closed in this way but most do as it allows us to put other tags or text inside of them which we'll see below.
+    </p>
+
+    <p>
+      The <strong>&lt;head&gt;</strong> tag specifies a section of code to be loaded before the rest of the page - the browser loads tags in the order you write them, top to 
+      bottom, left to right. The head element is used as a container for <a href="https://inventingthemedium.com/glossary/" target="_blank"><strong>metadata</strong></a> (see the 
+      <strong>&lt;meta&gt;</strong> tag below) which is not directly displayed on the web page. It's also quite common to import other code files or assets in the <strong>&lt;head&gt;</strong> through 
+      the use of the <strong>&lt;link&gt;</strong> and <strong>&lt;script&gt;</strong> tags, something we'll discuss in more detail in the next few weeks.
+      <br /><br />
+      <strong>Each HTML document should only ever include one instance of the &lt;head&gt; tag.</strong>
+    </p>
+
+    <p>
+      The <strong>&lt;meta&gt;</strong> tag is used to add additional information about the web page, which in our case means defining the character set or <strong>charset</strong> used by the 
+      HTML (<a href="https://youtu.be/MijmeoH9LT4" target="_blank">UTF-8</a> is pretty standard), as well as details of the 'viewport' that will help us make our site responsive 
+      for mobile devices later.
+    </p>
+
+    <p>
+      The <strong>&lt;title&gt;</strong> tag specifies the title of the page in the browser tab above the webpage itself - for example 'HTML Basics' on this page.
+    </p>
+
+    <p style="background-color:darkseagreen; filter: invert();">
+      <strong>Task:</strong> Open the boilerplate folder from last week and add in a <strong>&lt;title&gt;</strong> tag with whatever title you like inside of the <strong>&lt;head&gt;</strong> tag. If you're having 
+      difficulty getting it to work check the <strong>&lt;head&gt;</strong> tag from the code for this page for an example.
+    </p>
+
+    <p>
+      The <strong>&lt;body&gt;</strong> tag specifies the information to display on the page itself and is where most of your HTML code will go.
+      <br /><br />
+      <strong>Each HTML document should only ever include one instance of the &lt;body&gt; tag.</strong>
+    </p>
+
+    
+
+  </section>
+
+  <section style="background-color:lavender;" id="elements" class="sections">
+
+    <h2>HTML Elements</h2>
+
+    <p>
+      HTML tags are used to define <strong>HTML elements</strong> which act as containers for your web page's information. A HTML element refers to both the start tag and end tag as well as anything 
+      placed inside of it, as shown below.
+    </p>
+
+    <img src="./images/element.png" width="926px" alt="diagram of a HTML element">
+
+    <p>
+      HTML elements can also be placed <i>inside</i> other HTML elements - this is called <strong>nesting</strong>. The outside element in this relationship is called the <strong>parent</strong> and it will pass 
+      on certain information down to the element contained inside it which is called the <strong>child</strong>.
+    </p>
+
+    <img src="./images/parentChild.png" width="926px" alt="one HTML element with another inside of it">
+    
+    <p>
+      This is why HTML elements are thought of as containers - sometimes they are used to contain content like words or picture, sometimes they are used to contain other HTML elements and 
+      sometimes they might contain nothing at all.
+    </p>
+
+    <p>
+      It is standard practice to use lowercase text for HTML tags and to indent one tab or two spaces to help show the relationship between <strong>parent</strong> and 
+      <strong>child</strong> elements when placing a HTML element inside another - as you can see in the boilerplate code picture above or the source code for this page. This 
+      formatting helps you to quickly read your code. People get very passionate about using either spaces or tabs for indents - just pick one and be consistent.
+    </p>
+
+  </section>
+
+  <section style="background-color:gold;" id="" class="sections">
+
+    <h2>Basic Elements</h2>
+
+    <p>
+      The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">list of supported HTML elements</a> is quite long, so to start with let's cover 
+      some that you might use regularly when working with text on a web page. Each of these will require an accompanying closing tag and will display any text typed within in their own specifc manner.
+    </p>
+
+    <p style="background-color:gold; filter: invert();">
+      <strong>Task:</strong> Test and identify the elements below by writing some text inside of the empty elements in the source code for this page. Try and work it out 
+      through experimentation and then write what each of them do inside their tags. If you get stuck you can refer to the above link for explanations of each element.
+    </p>
+
+      <p style="color:red;">&lt;h1&gt; to &lt;h6&gt;</p>
+      <!-- write the element name inside the empty elements like the one directly below this -->
+      <h1></h1>
+      <h2></h2>
+      <h3></h3>
+      <h4></h4>
+      <h5></h5>
+      <h6></h6>
+
+      <p style="color:red;">&lt;p&gt;</p>
+      <p></p>
+
+      <p style="color:red;">&lt;i&gt;</p>
+      <i></i>
+
+      <p style="color:red;">&lt;em&gt;</p>
+      <em></em>
+
+      <p>
+        🕵️ &lt;i&gt; & &lt;em&gt; have the same style, so why are they two different elements? Read an explanation 
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em#usage_notes">here</a>.
+      </p>
+      
+
+      <p style="color:red;">&lt;b&gt;</p>
+      <b></b>
+
+      <p style="color:red;">&lt;strong&gt;</p>
+      <strong></strong>
+
+      <p>
+        &lt;b&gt; & &lt;strong&gt; have a similar relationship as above. Read their explanation 
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong#usage_notes">here</a>.
+      </p>
+
+      <p style="color:red;">&lt;del&gt;</p>
+      <del></del>
+
+      <p style="color:red;">&lt;sup&gt;</p>
+      <sup></sup>
+
+      <p style="color:red;">&lt;sub&gt;</p>
+      <sub></sub>
+
+      <p style="color:red;">&lt;u&gt;</p>
+      <u></u>
+
+      <p>
+        While the &lt;u&gt; will create an underline it is intended to indicate non-textual annotations, such as the lines 
+        you might get under a spelling error. Read the explanation 
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u#usage_notes">here</a>. To create a decorative 
+        underline MDN recommends using CSS - something we'll cover in more detail next week.
+      </p>
+
+      <p>
+        Both &lt;ul&gt; & &lt;ol&gt; are designed to be used as parents to the <span style="color:red;">&lt;li&gt;</span> element - try adding 
+        text inside the &lt;li&gt; and then add additional &lt;li&gt; inside each the &lt;ul&gt; & &lt;ol&gt; examples below.
+      </p>
+
+      <p style="color:red;">&lt;ul&gt;</p>
+      <ul>
+        <li></li>
+      </ul>
+
+      <p style="color:red;">&lt;ol&gt;</p>
+      <ol>
+        <li></li>
+      </ol>
+    <p>
+      <strong>Tip</strong> - Remember that HTML is designed specifically for information design and knowing which tag does what will give you a head start on the 
+      visual hierarchy of your page.
+    </p>
+
+  </section>
+
+  <section style="background-color:palegreen;" id="attributes" class="sections">
+
+      <h2>HTML Attributes</h2>
+
+      <p>
+        All HTML elements can have one or more <strong>attributes</strong> that provide additional information about the element and are contained inside the start tag - they tend 
+        to look like this: name="value".
+      </p>
+
+      <img src="./images/attribute.png" width="926px" alt="diagram of a HTML element with an attribute">
+
+      <p>
+        When writing attribute names and values inside of the HTML tags use lowercase text, "" double quotes around the values and don't leave any spaces 
+        around the equal signs.
+      </p>
+
+      <p>
+        Attributes can change how an element is displayed or what it does. Some attributes 
+        (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes" target="_blank">global attributes</a>) are able to be applied to any element, such as 
+        <strong>title</strong> & <strong>style</strong>:
+      </p>
+
+      <p title="Test Title Attribute">
+        <strong>title</strong> - this can specify a title for the element, like we did for our web page, but instead of displaying in the tab it will show while hovering over the element with 
+        your cursor (try hovering your cursor over this sentence).
+      </p>
+
+      <p>
+        <strong>style</strong> - this allows us to specify how an element will appear in the browser, we'll get to what this can do in more detail next week, but for now know that 
+        it can be used to change the element's appearance.
+      </p>
+
+      <p>
+        <strong><span style="text-decoration: underline;">
+          ⚠️IMPORTANT NOTE⚠️ - HTML, CSS and JavaScript use American English spelling - while the instructions refer to using a colour but be sure to spell it color in your attributes and CSS.
+        </span></strong>
+      </p>
+
+      <p>
+        Some attributes are specific to a single or set of elements - a couple of common pairings of attributes and elements are listed below but if you want to find out which attributes 
+        are applicable to an element they're listed on that element's MDN reference page.
+      </p>
+
+      <p>
+        <span style="color:red;">&lt;a&gt;</span> elements are used to create links to other web pages or sections of the web page you're currently on. The <strong>href</strong> 
+        attribute is used to define where the link leads, for example by using a URL. Another common attribute for &lt;a&gt; is <strong>target</strong> which changes where to display 
+        the linked URL - the default behaviour is to redirect the current tab but by using the "_blank" value we can ask the browser to display the link in a new tab instead.
+      </p>
+
+      <p style="background-color:palegreen; filter: invert();">
+        <strong>Task:</strong> Try adding an external URL to the href attribute in the &lt;a&gt; element below in the source code for this page.
+      </p>
+      
+      <a href="" target="_blank">test link</a>
+
+      <p>
+        <span style="color:red;">&lt;img&gt;</span> elements are used to display images of various formats (such as .jpg .png or .svg) and require a few different attributes to 
+        work properly. First you need to tell it the source image file to use with <strong>src</strong> attribute - this will usually be a link to a file either in your website's folder 
+        or hosted elsewhere online. An &lt;img&gt; element's size is also sometimes defined through the <strong>width</strong> & <strong>height</strong> attributes, though this can also be 
+        controlled with CSS. Finally <strong>alt</strong> is needed to provide <a href="https://www.w3schools.com/tags/att_img_alt.asp" target="_blank">alternative text</a>, 
+        a short description of the image and an important first step in improving the accessibility of your site.        
+      </p>
+
+      <p>
+        Source links to media can be given as <strong>absolute</strong> or <strong>relative</strong> paths:
+      </p>
+
+      <p>
+        <strong>Absolute</strong> paths give the exact file location and refer to one specific place, eg: "https://upload.wikimedia.org/wikipedia/commons/c/c1/PM5644.svg" or 
+        "C:\Users\Patrick\Pictures\test-pattern-1920x1080.gif"
+        <br />
+        <a href="https://www.youtube.com/watch?v=SsoOG6ZeyUI" target="_blank">this link has an absolute path to another website</a>
+      </p>
+      
+      <p>
+        <strong>Relative</strong> paths give the location of the file based on the location of the HTML document, eg: "./selfie.jpg" or "./images/attribute.png"
+        <br />
+        <a href="./images/art-and-technology.jpg" target="_blank">this link has a relative path to a local file</a>
+        <br />
+        The example link above will look for a folder called images in the same location as our index.html (./ in this case stands in for the folder that the HTML document is in) 
+        and then tries to find a file called art-and-technology.jpg within that folder. It is best practice to use relative paths where possible, that way if you keep all of your 
+        assets in your web folder you won't have broken links if you move the folder to a different computer.
+      </p>
+
+      <p style="background-color:palegreen; filter: invert();">
+        <strong>Task:</strong> Fill out the <strong>src</strong> and <strong>alt</strong> attributes in the empty &lt;img&gt; element below this in the source code for 
+        this page. Use a relative link to the file called smiling-dog-captcha.png for the <strong>src</strong> and write a description in your own words for the <strong>alt</strong>.
+        <br />
+        <em>Hint</em> - src and href attributes both take the same type of URL value - if you get stuck look for other examples of a working &lt;img&gt; element elsewhere in the source 
+        code for this page. If you want a more detailed examples of how to write alt text check out 
+        <a href="https://www.w3.org/WAI/tutorials/images/" target="_blank">this comprehensive guide</a>.
+      </p>
+
+      <img src="" alt="">
+
+  </section>
+
+  <section style="background-color:lightsalmon;" id="block-and-inline" class="sections">
+
+    <h2>ID and Class</h2>
+
+    <p>
+      Another key use for HTML attributes is to help us organise, find and change our elements. Individual elements can be give a unique name with the <strong>id</strong> attribute and multiple elements 
+      can be grouped together with the <strong>class</strong> attribute. Both can be named whatever you want as long as it doesn't contain any spaces, but it pays to be descriptive in what you 
+      choose.
+    </p>
+
+    <p>
+      <strong>id</strong> - this is used to refer to a single HTML element on a given web page. This can help us do a number of things which we'll explore in the following weeks such as change 
+      an element's style or interact with the page dynamically.
+    </p>
+
+    <p style="background-color:lightsalmon; filter: invert();">
+      <strong>Task:</strong> The link below is using an element's id attribute instead of a URL - instead of jumping to another web page or piece of media this will instead scroll the web page 
+      to where the element with the matching id is. Look for the opening tag of the previous &lt;section&gt; element that contains the list of basic HTML elements in the source code for this page - it should have an 
+      empty id attribute. Give this element the id of "basic-elements" (needs to match exactly, no capitals) then try clicking on the link below - it should now move the page up to so you can see that 
+      section of the page.
+    </p>
+
+    <!-- The # in the below href link is telling the <a> to look for an id - the actual id is basic-elements -->
+    <a href="#basic-elements">Jump back to basic elements</a>
+    
+    <p>
+      <strong>class</strong> - this is used to refer to a group of HTML elements on a given web page. We'll also be looking at using this quite a lot in the following weeks, especially to help 
+      easily and cohesively style our elements.
+    </p>
+
+    <p style="background-color:lightsalmon; filter: invert();">
+      <strong>Task:</strong> Each &lt;section&gt; element on the page not only has a unique id but is also assigned the class "sections" - near the top of the HTML document (lines 11-21) you'd find 
+      a &lt;style&gt; element containg a small piece of CSS designed to change the look of everything using the "sections" class. The code is currently not working as it is what's called commented out 
+      (more information on this shortly) - try uncommenting the code by deleting the /* on line 12 and the */ on line 18 - it should change what each "sections" element looks like.
+      <br />
+    </p>
+    
+
+  </section>
+
+  <section style="background-color:lightgray;" id="block-and-inline" class="sections">
+
+    <h2>HTML Container Elements</h2>
+
+    <p>
+      So far we've covered common elements for displaying text, links and images but we haven't talked about the element you're likely to see the most of on any website: 
+      <span style="color:red;">&lt;div&gt;</span>. A &lt;div&gt; is a generic container that does not inherently represent anything and is commonly used to group other HTML elements 
+      together so they can be styled easily (more on that next week). One key property of &lt;div&gt;s is the way they are displayed, belonging to category of elements called "block-level" 
+      or <strong>block</strong>.
+    </p>
+
+    <p>
+      <strong>Block</strong> - A block-level element occupies the entire horizontal space of its parent element (container), and vertical space equal to the height of its contents, thereby 
+      creating a "block" - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements" target="_blank">see more details here</a>. The &lt;p&gt; element is another commonly 
+      used block element as every time you write a new paragraph you want it to start on a new horizontal line.
+    </p>
+
+    <p>
+      The counterpart to the &lt;div&gt; is the <span style="color:red;">&lt;span&gt;</span> element, like the &lt;div&gt; it is used as container for other elements or text, but unlike the 
+      &lt;div&gt; it is displayed as "inline-level" or <strong>inline</strong>.
+    </p>
+
+    <p>
+      <strong>Inline</strong> - An inline-level element will only occupy the horizontal space of its content and unlike block will not force a vertical line break - 
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements" target="_blank">see more details here</a>. You can see an example of &lt;span&gt; in the paragraph above, 
+      to display &lt;span&gt; in red text without creating a new paragraph.
+    </p>
+
+    <p style="background-color:lightgray; filter: invert();">
+      <strong>Task:</strong> Inside the &lt;p&gt; tag below this one there is an <strong>inline</strong> &lt;span&gt; element - try changing the tag so it's a &lt;div&gt; instead and notice 
+      how it changes how the text is displayed on the webpage.
+    </p>
+    
+    <p>This is some test writing so you can see <span>how elements react</span> to being either inline or block.</p>
+
+    <p>All elements have default ways they are displayed - the most common are <strong>block</strong> and <strong>inline</strong> but there are others we will cover later this semester.</p>
+
+    <p>
+      While it is quite common to just use &lt;div&gt; and &lt;span&gt; elements when constructing web pages, both contain little information about what is inside 
+      them beyond whether they should display as <strong>block</strong> or <strong>inline</strong>. &lt;div&gt; is just a generic container as is &lt;span&gt;. Best practice for information 
+      design is to <em>always</em> use the most appropriate element for what's inside it. If you look at the source code for this page you'll notice that I've used the &lt;section&gt; element 
+      rather than the &lt;div&gt; element as the parent element for each topic - even though they're functionally the same the distinction helps both myself and others understand what to expect 
+      inside of each container element. For an extensive list of the different elements and brief descriptions about what they are used for you can look at 
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">this MDN page</a> (this is also linked in the Week 2 modules).
+    </p>
+
+  </section>
+
+  <section style="background-color:plum;" id="av" class="sections">
+
+      <h2>HTML Audio and Video</h2>
+
+      <p>
+        Audio and video can be embedded in an HTML page using the <span style="color:red;">&lt;audio&gt;</span> and <span style="color:red;">&lt;video&gt;</span> elements - like &lt;img&gt; 
+        both elements need a src attribute linking to a media file.
+      </p>
+
+      <audio src="./sounds/ping.mp3" controls></audio>
+
+      <p>
+        The &lt;audio&gt; element above has two attributes - src works just like with &lt;img&gt; but instead needs a link to an audio file. It also has the controls attribute which doesn't need 
+        a value - if it's included it gives users a built in set of controls for audio playback.
+      </p>
+
+      <p>The &lt;video&gt; element works in much the same way and makes use of both src and controls attributes.</p>
+
+      <p style="background-color:plum; filter: invert();">
+        <strong>Task:</strong> Create a video element in the source code below the audio element - set the src to the file in the videos folder and then give it default controls like the 
+        &lt;audio&gt; element.
+      </p>
+
+  </section>
+
+  <section style="background-color:aliceblue;" id="comments" class="sections">
+
+      <h2>HTML Comments</h2>
+
+      <p>
+        You can add comments to your HTML code (text that will be ignored by the browser when building the web page) by using the &lt;!-- and --&gt; tags - see the example in the code below. I've also 
+        added several other comments to the source code as notes to explain some extra details about formatting HTML.
+      </p>
+
+      <!-- This is a comment -->
+
+      <p>
+        A key part of assessments two and three this semester will require the use of comments in your code - we'll talk more about how to approach this in later weeks 
+        but for now it's just good to know how to write them in the different web languages - I'll show examples of CSS and JavaScript comments in their respective 
+        worksheets.
+      </p>
+
+      <p style="background-color:aliceblue; filter: invert();">
+        <strong>Task:</strong> Add a comment above each element inside the &lt;head&gt; element of your boilerplate's index.html briefly explaining what they do.</p>
+
+  </section>
+
+
+  <section style="background-color:skyblue;" id="key-task" class="sections">
+
+    <h2>Key Task for the Week</h2>
+
+    <p>
+      You're now ready to start building out your web page for assignment 1 ╭( ･ㅂ･)و ̑̑ ˂ᵒ͜͡ᵏᵎ⁾✩
+      <br />
+      To start if you haven't already done so copy the contents of your boilerplate web folder into the web folder for assignment 1 and then start to fill out the &lt;head&gt; and &lt;body&gt;.
+      You should include:
+      <ul>
+        <li>A page title that will display in the browser tab</li>
+        <li>A page heading using an appropriate heading element</li>
+        <li>A screenshot of the website you're researching</li>
+        <li>A link to the website you're researching</li>
+        <li>All of the research questions in appropriate elements</li>
+        <li>Empty elements ready for the answers to the research questions (some sort of list might work best for question 2)</li>
+      </ul>
+      After this you'll be all set to start entering your answers to this week's research questions. I'll expect your HTML to be at this level for next week as we'll then be adding some CSS to 
+      style it.
+    </p>
+
+  </section>
+
+</body>
+
+</html>

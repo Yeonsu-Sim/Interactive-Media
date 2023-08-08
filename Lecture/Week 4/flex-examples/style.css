@@ -1,0 +1,180 @@
+/* This one CSS file is being imported into each of the examples so I've used comments to split up the sections */
+
+/* This contains global styles that will be useful for all pages */
+
+*{
+ box-sizing: border-box;
+ margin: 0; 
+}
+
+:root{
+  --comp-col-01:rgb(40,40,40);
+  --comp-col-02:rgb(80,80,80);
+  --comp-col-03:rgb(120,120,120);
+  --comp-col-04:rgb(160,160,160);
+  --comp-col-05:rgb(200,200,200);
+  --comp-col-06:rgb(240,240,240);
+  --border: 3px solid aliceblue;
+}
+
+h1 {
+  margin: 1rem;
+}
+
+p {
+  margin: 1rem;
+}
+
+/* Style for one-d-list.html */
+
+.one-d-vertical-container{
+  display: flex;
+  flex-direction: column;
+}
+.one-d-horizontal-container{
+  display: flex;
+  flex-direction: row;
+}
+
+/* Style for res-units-example */
+
+#res-ex-one{
+  background-color: coral;
+}
+#res-ex-two{
+  background-color: cornflowerblue;
+  height: 1rem;
+}
+#res-ex-three{
+  background-color: plum; 
+}
+#res-ex-four{
+  background-image: linear-gradient(to left, coral, cornflowerblue);
+  width: 600px;
+  height: 1rem;
+}
+#res-ex-five{
+  background-image: linear-gradient(to left, coral, cornflowerblue);
+  width: 60%;
+  height: 1rem;
+}
+#res-ex-six{
+  background-image: linear-gradient(to left, coral, cornflowerblue);
+  width: 60rem;
+  height: 1rem;
+}
+#res-ex-seven{
+  background-image: linear-gradient(to left, coral, cornflowerblue);
+  width: 60%;
+  height: 1rem;
+}
+#res-ex-eight{
+  background-image: linear-gradient(to left, coral, cornflowerblue);
+  width: 60%;
+  height: 1rem;
+}
+#res-ex-nine{
+  background-image: linear-gradient(to left, coral, cornflowerblue);
+  width: 60%;
+  height: 1rem;
+}
+
+/* Style for flex-example.html */
+
+.FlexExWrapper{
+  background-color: black;
+}
+
+#example-one{
+  background-color: blanchedalmond;
+}
+#example-two{
+  background-color: red;
+}
+#example-three{
+  background-color: blueviolet;
+}
+#example-four{
+  background-color: lime;
+  flex-grow: 2;
+}
+#example-five{
+  background-color: coral;
+}
+#example-six{
+  background-color: cornflowerblue;
+}
+#example-seven{
+  background-color:fuchsia ;
+}
+#example-eight{
+  background-color: plum;
+}
+
+.nested-example{
+  background-color: aliceblue;
+}
+
+/* Style for e1-example.html */
+
+.ExOneWrapper{
+  background-color:rgb(20,20,20);
+  /* below are two examples of forcing aspect ratio by using vh or vw */
+  /* force to fit 9:16 to height */
+  width: 71vh;
+  height: 100vh;
+  /* force to fit 9:16 to width */
+  /* width: 99vw;
+  height: 177vw; */
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom, #5252ff, #b5e877);
+}
+
+.LayerOneBox{
+  flex-shrink: 1;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  margin-top: 1vh;  
+}
+
+.LayerTwoBox{
+  height: 50%;
+}
+
+.BoxStyle{
+  background-color: rgb(40,40,40);
+  border: var(--border);
+}
+
+.DetailText{
+  text-align: center;
+  color: aliceblue;
+}
+
+.GreyOne{
+  background-color: var(--comp-col-01);
+}
+.GreyTwo{
+  background-color: var(--comp-col-02);
+}
+.GreyThree{
+  background-color: var(--comp-col-03);
+}
+.GreyFour{
+  background-color: var(--comp-col-04);
+}
+.GreyFive{
+  background-color: var(--comp-col-05);
+}
+.GreySix{
+  background-color: var(--comp-col-06);
+}
+/* The below class is a trick to get a pill shape border */
+.PillRadius{
+  border-radius: 100000000000000px;
+}
