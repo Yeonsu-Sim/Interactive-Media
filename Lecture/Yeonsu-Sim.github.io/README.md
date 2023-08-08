@@ -1,3 +1,0 @@
-# Interactive-Media
-
-### 🫀 RMIT Lecture
