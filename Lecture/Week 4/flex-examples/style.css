@@ -83,13 +83,28 @@ p {
 
 .FlexExWrapper{
   background-color: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items:stretch;
+  gap: 1rem;
 }
 
 #example-one{
   background-color: blanchedalmond;
+  flex-grow: 3;
 }
 #example-two{
   background-color: red;
+  flex-grow: 1;
+  /* background-color: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items:stretch;
+  gap: 1rem; */
 }
 #example-three{
   background-color: blueviolet;
