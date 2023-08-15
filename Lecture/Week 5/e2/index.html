@@ -33,10 +33,11 @@
 
       <!-- Week 5 Lecture Practice -->
       <details class="FilterBox">
-        <summary>Test Category</summary>
-        <button class="FilterButton" onclick='filterRecipes("test", "numone", this)'>Test 1</button>
-        <button class="FilterButton" onclick='filterRecipes("test", "numtwo", this)'>Test 2</button>
-        <button class="FilterButton" onclick='resetFilter()'>ALL Authors</button>
+        <summary>Skill Level</summary>
+        <button class="FilterButton" onclick='filterRecipes("skilllevel", "Low", this)'>Low</button>
+        <button class="FilterButton" onclick='filterRecipes("skilllevel", "Medium", this)'>Medium</button>
+        <button class="FilterButton" onclick='filterRecipes("skilllevel", "High", this)'>High</button>
+        <button class="FilterButton" onclick='resetFilter()'>ALL Skill Levels</button>
       </details>
 
     </div>
@@ -47,7 +48,7 @@
     <!-- these are fine to leave as <div>s -->
     <div class="RecipeBox"
          data-author="HM"
-         data-test="numone"
+         data-skilllevel="Low"
     >
     <!-- 
       the above tag already has one custom data category called author - to get the filter to work with other catgories you'll need
@@ -106,7 +107,7 @@
     <!-- Recipe 2 -->
     <div class="RecipeBox"
          data-author="HM"
-         data-test="numtwo"
+         data-skilllevel="Low"
     >
 
       <div class="RecipeLink">URL: https://www.abc.net.au/everyday/caprese-salad-slow-roasted-tomato-rocket-basil-gremolata-recipe/10776846</div>
@@ -157,7 +158,7 @@
     <!-- Recipe 3 -->
     <div class="RecipeBox"
          data-author="KLA"
-         data-test="numtwo"
+         data-skilllevel="Medium"
     >
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/crispy-enoki-and-onion-fritter-with-thai-curry-mayo-recipe</div>
@@ -208,7 +209,7 @@
     <!-- Recipe 4 -->
     <div class="RecipeBox"
          data-author="M"
-         data-test="numtwo"
+         data-skilllevel="Medium"
     >
 
       <div class="RecipeLink">URL: https://www.maangchi.com/recipe/jjinppang</div>
@@ -258,6 +259,7 @@
     <!-- Recipe 5 -->
     <div class="RecipeBox"
          data-author="KLA"
+         data-skilllevel="Low"
     >
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/the-food-lab-best-chocolate-chip-cookie-recipe</div>
@@ -306,6 +308,7 @@
     <!-- Recipe 6 -->
     <div class="RecipeBox"
          data-author="KLA"
+         data-skilllevel="Low"
     >
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/grilled-cheese-with-kimchi-recipe</div>
@@ -356,6 +359,7 @@
     <!-- Recipe 7 -->
     <div class="RecipeBox"
          data-author="CLM"
+         data-skilllevel="Medium"
     >
 
       <div class="RecipeLink">URL: https://www.patreon.com/posts/recipe-hands-off-60369279</div>
@@ -405,6 +409,7 @@
     <!-- Recipe 8 -->
     <div class="RecipeBox"
          data-author="M"
+         data-skilllevel="Low"
     >
 
       <div class="RecipeLink">URL: https://www.maangchi.com/recipe/kimchijeon</div>
@@ -453,6 +458,7 @@
     <!-- Recipe 9 -->
     <div class="RecipeBox"
          data-author="KLA"
+         data-skilllevel="Medium"
     >
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/shakshuka-north-african-shirred-eggs-tomato-pepper-recipe</div>
@@ -501,6 +507,7 @@
     <!-- Recipe 10 -->
     <div class="RecipeBox"
          data-author="CLM"
+         data-skilllevel="Low"
     >
 
       <div class="RecipeLink">URL: https://www.patreon.com/posts/pasta-with-sauce-45042575</div>
@@ -549,6 +556,7 @@
     <!-- Recipe 11 -->
     <div class="RecipeBox"
          data-author="M"
+         data-skilllevel="Medium"
     >
 
       <div class="RecipeLink">URL: https://www.maangchi.com/recipe/yangnyeom-tongdak</div>
@@ -599,6 +607,7 @@
     <!-- Recipe 12 -->
     <div class="RecipeBox"
          data-author="KLA"
+         data-skilllevel="Medium"
     >
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/ultimate-beef-stroganof-recipe</div>
@@ -649,6 +658,7 @@
     <!-- Recipe 13 -->
     <div class="RecipeBox"
          data-author="CLM"
+         data-skilllevel="Medium"
     >
 
       <div class="RecipeLink">URL: https://www.patreon.com/posts/recipe-vanilla-60100711</div>
@@ -699,6 +709,7 @@
     <!-- Recipe 14 -->
     <div class="RecipeBox"
          data-author="HM"
+         data-skilllevel="Low"
     >
 
       <div class="RecipeLink">URL: https://www.abc.net.au/everyday/vegetarian-carbonara-with-mushrooms-and-miso/12426392</div>

@@ -59,6 +59,7 @@ body{
 }
 
 .RecipeName{
+  color: yellow;
 
 }
 
@@ -87,6 +88,7 @@ body{
 }
 
 .TimeToCook{
+  color: magenta;
 
 }
 
