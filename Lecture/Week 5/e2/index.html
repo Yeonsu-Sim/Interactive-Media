@@ -31,7 +31,23 @@
         <button class="FilterButton" onclick='resetFilter()'>ALL Authors</button>
       </details>
 
-      <!-- Week 5 Lecture Practice -->
+      <!-- I think -->
+      <details class="FilterBox">
+        <summary>Dietary</summary>
+        <button class="FilterButton" onclick='filterRecipes("dietary", "Vegetarian", this)'>Vegetarian</button>
+        <button class="FilterButton" onclick='filterRecipes("dietary", "Meat based", this)'>Meat based</button>
+        <button class="FilterButton" onclick='filterRecipes("dietary", "Pescatarian", this)'>Pescatarian</button>
+        <button class="FilterButton" onclick='resetFilter()'>ALL Dietary</button>
+      </details>
+
+      <details class="FilterBox">
+        <summary>Course</summary>
+        <button class="FilterButton" onclick='filterRecipes("course", "Main", this)'>Main</button>
+        <button class="FilterButton" onclick='filterRecipes("course", "Side", this)'>Sidebased</button>
+        <button class="FilterButton" onclick='filterRecipes("course", "Dessert", this)'>Dessert</button>
+        <button class="FilterButton" onclick='resetFilter()'>ALL Course</button>
+      </details>
+
       <details class="FilterBox">
         <summary>Skill Level</summary>
         <button class="FilterButton" onclick='filterRecipes("skilllevel", "Low", this)'>Low</button>
@@ -49,6 +65,8 @@
     <div class="RecipeBox"
          data-author="HM"
          data-skilllevel="Low"
+         data-dietary="Vegetarian"
+         data-course="Main"
     >
     <!-- 
       the above tag already has one custom data category called author - to get the filter to work with other catgories you'll need
@@ -108,6 +126,8 @@
     <div class="RecipeBox"
          data-author="HM"
          data-skilllevel="Low"
+         data-dietary="Vegetarian"
+         data-course="Side"
     >
 
       <div class="RecipeLink">URL: https://www.abc.net.au/everyday/caprese-salad-slow-roasted-tomato-rocket-basil-gremolata-recipe/10776846</div>
@@ -159,6 +179,8 @@
     <div class="RecipeBox"
          data-author="KLA"
          data-skilllevel="Medium"
+         data-dietary="Vegetarian"
+         data-course="Side"
     >
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/crispy-enoki-and-onion-fritter-with-thai-curry-mayo-recipe</div>
@@ -210,6 +232,8 @@
     <div class="RecipeBox"
          data-author="M"
          data-skilllevel="Medium"
+         data-dietary="Vegetarian"
+         data-course="Dessert"
     >
 
       <div class="RecipeLink">URL: https://www.maangchi.com/recipe/jjinppang</div>
@@ -260,6 +284,8 @@
     <div class="RecipeBox"
          data-author="KLA"
          data-skilllevel="Low"
+         data-dietary="Vegetarian"
+         data-course="Dessert"
     >
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/the-food-lab-best-chocolate-chip-cookie-recipe</div>
@@ -309,6 +335,8 @@
     <div class="RecipeBox"
          data-author="KLA"
          data-skilllevel="Low"
+         data-dietary="Vegetarian"
+         data-course="Side"
     >
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/grilled-cheese-with-kimchi-recipe</div>
@@ -360,6 +388,8 @@
     <div class="RecipeBox"
          data-author="CLM"
          data-skilllevel="Medium"
+         data-dietary="Meat based"
+         data-course="Main"
     >
 
       <div class="RecipeLink">URL: https://www.patreon.com/posts/recipe-hands-off-60369279</div>
@@ -410,6 +440,8 @@
     <div class="RecipeBox"
          data-author="M"
          data-skilllevel="Low"
+         data-dietary="Vegetarian"
+         data-course="Side"
     >
 
       <div class="RecipeLink">URL: https://www.maangchi.com/recipe/kimchijeon</div>
@@ -459,6 +491,8 @@
     <div class="RecipeBox"
          data-author="KLA"
          data-skilllevel="Medium"
+         data-dietary="Vegetarian"
+         data-course="Main"
     >
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/shakshuka-north-african-shirred-eggs-tomato-pepper-recipe</div>
@@ -508,6 +542,8 @@
     <div class="RecipeBox"
          data-author="CLM"
          data-skilllevel="Low"
+         data-dietary="Pescatarian"
+         data-course="Main"
     >
 
       <div class="RecipeLink">URL: https://www.patreon.com/posts/pasta-with-sauce-45042575</div>
@@ -557,6 +593,8 @@
     <div class="RecipeBox"
          data-author="M"
          data-skilllevel="Medium"
+         data-dietary="Meat based"
+         data-course="Main"
     >
 
       <div class="RecipeLink">URL: https://www.maangchi.com/recipe/yangnyeom-tongdak</div>
@@ -608,6 +646,8 @@
     <div class="RecipeBox"
          data-author="KLA"
          data-skilllevel="Medium"
+         data-dietary="Meat based"
+         data-course="Main"
     >
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/ultimate-beef-stroganof-recipe</div>
@@ -659,6 +699,8 @@
     <div class="RecipeBox"
          data-author="CLM"
          data-skilllevel="Medium"
+         data-dietary="Vegetarian"
+         data-course="Dessert"
     >
 
       <div class="RecipeLink">URL: https://www.patreon.com/posts/recipe-vanilla-60100711</div>
@@ -710,6 +752,8 @@
     <div class="RecipeBox"
          data-author="HM"
          data-skilllevel="Low"
+         data-dietary="Vegetarian"
+         data-course="Main"
     >
 
       <div class="RecipeLink">URL: https://www.abc.net.au/everyday/vegetarian-carbonara-with-mushrooms-and-miso/12426392</div>
